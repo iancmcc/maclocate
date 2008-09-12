@@ -60,9 +60,10 @@ class SkyhookProtocol(object):
     def done(self, data=None):
         self.parsed += 1
         if self.parsed >= self.FINISHEDNUM:
-            for map, loc in self.results:
-                lat, long = loc
-                print "%s\t%s, %s" % (result, lat, long)
+            for mac, loc in self.results:
+                if type(loc)==tuple:
+                    loc = " ".join(loc)
+                print "%s\t%s" % (mac, loc)
             reactor.stop()
 
     def start(self, macaddresses, standalone=True):

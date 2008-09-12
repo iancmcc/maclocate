@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import sys, os
 
-version = '0.1'
+version = '0.1.4'
 
 setup(name='maclocate',
       version=version,
@@ -19,7 +19,7 @@ setup(name='maclocate',
       zip_safe=True,
       install_requires=[
           'simplexmlapi',
-          'twisted'
+          'Twisted'
       ],
       entry_points={
           'console_scripts': [
