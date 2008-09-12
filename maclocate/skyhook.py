@@ -61,8 +61,6 @@ class SkyhookProtocol(object):
         self.parsed += 1
         if self.parsed >= self.FINISHEDNUM:
             for mac, loc in self.results:
-                if type(loc)==tuple:
-                    loc = " ".join(loc)
                 print "%s\t%s" % (mac, loc)
             reactor.stop()
 

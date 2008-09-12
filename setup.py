@@ -19,7 +19,8 @@ setup(name='maclocate',
       zip_safe=True,
       install_requires=[
           'simplexmlapi',
-          'Twisted'
+          'Twisted',
+          'pyopenssl'
       ],
       entry_points={
           'console_scripts': [
